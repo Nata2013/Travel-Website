@@ -6,12 +6,67 @@
     <title>Бронирование авиабилетов</title>
     <link rel = "style" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 </head>
 <body>
-    
+    <header>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#">Корпоротивным клиентам</a></li>
+                <li><a href="#">Авиабилеты</a></li>
+                <li><a href="#">Справка </a></li>
+            </ul>
+            <div class="language-dropdown">
+                <select>
+                  <option>RU</option>
+                  <option>EN</option>
+                  <option>FR</option>
+                </select>
+        </nav>
+        <div class="container">
+            <div class="logo"></div>
+            <h1>Лучшие авиабилеты по самым низким ценам </h1>
+            <nav class ="nav">
+                
+                <ul>
+                    <li><a href="air-tickets">Авиабилеты</a></li>
+                    <li><a href="train-ticktes">Ж/д билеты</a></li>
+                    <li><a href="bus">Автобусы</a></li>
+                    <li><a href="hotel">Отели <b>-60%</b></a></li>
+                    <li><a href="insuranse">Страхование</a></li>
+                </ul>
+            </nav>
+          </div>         
+    </header>
+ 
 
-  
+<!--Main Section   -  user searching for flights-->
+
+<main>
+    <section class="search">
+        <form id="searchForm">
+            <input type="text" id="from" placeholder="Откуда" class input="input-field" list="cities">
+            <input type="text" id="to" placeholder = "Куда" class input="input-field" list="cities">
+            <datalist id="cities">
+                <option value="Москва"></option>
+                <option value="Санкт-Петербург"></option>
+                <option value="Барселона"></option>
+                <option value="Лондон"></option>
+                <option value="Нью-Йорк"></option>
+                <option value="Варшава"></option>
+            </datalist>
+
+            <input type="date" id="departure date" class="input">
+            <input type="date" id="return date" class="input">
+
+            <select id="passenger count" class="input">
+                <option value="1">1 пассажир</option>
+                <option value="2">2 пассажира</option>
+                <option value="3">3 пассажира</option> 
+            </select>
+        </form>
+    </section>
+</main>
 
 
 
@@ -21,9 +76,7 @@
 
 
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
     <script src="js/script.js"></script>
 </body>
 </html>
