@@ -1,43 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --primary-color :#6E36F7 ;
-    --white : #FFFFFF;
-    --red: #FF4D4D;
-    
-    
-    /* transition*/
-    --transition: 0.25s ease-in-out;
-    
-    /* spacing*/
-    --section-padding: 60px;
-    
-    
-    /*border-radius*/
-    --radius-15: 15px;
-    --radius-25: 25px;
-    
-    }
-    
-    
-    
-    
-    
-    
-    /*------------*\
-    *RESET
-    \*------------*/
-    
-    *, *::before, *::after{
-        margin: 0;
-        padding:0;
-        box-sizing:border-box;
-    }
-    
-    li{
-        list-style:none;
-    }
-    
-     a{
-        text-decoration: none;;
-     }
+
+*{
+    margin :0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header, aside , .search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #593aa9;
+    color: #fff;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav select {
+    color: #fff;
+    background-color: #6E36F7;
+    border: none;
+    padding: 5px 10px;
+}
+
+header .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .hamburger span {
+    background-color: #fff;
+    height: 4px;
+    width: 30px;
+    margin: 6px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+main {
+    padding: 40px 20px;
+}

@@ -4,80 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бронирование авиабилетов</title>
-    <link rel = "style" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
     
 </head>
 <body>
     <header>
-        <nav class="top-nav">
+        <nav>
             <ul>
-                <li><a href="#">Корпоротивным клиентам</a></li>
-                <li><a href="#">Авиабилеты</a></li>
-                <li><a href="#">Справка </a></li>
-                <li><a href="#">Language</a>
-                    <ul class="submenu">
-                        <select>
-                            <option>RU</option>
-                            <option>EN</option>
-                            <option>FR</option>
-                          </select>
-                    </ul>
-                </li>   
-            </ul>
-            
-        </nav>
-        <div class="container">
-            <div class="logo"></div>
-            <h1>Лучшие авиабилеты по самым низким ценам </h1>
-            <nav class ="nav">
-                
-                <ul>
-                    <li><a href="air-tickets">Авиабилеты</a></li>
-                    <li><a href="train-ticktes">Ж/д билеты</a></li>
-                    <li><a href="bus">Автобусы</a></li>
-                    <li><a href="hotel">Отели <b>-60%</b></a></li>
-                    <li><a href="insuranse">Страхование</a></li>
-                </ul>
-            </nav>
-          </div>         
+                <li><a href="#" class="nav-link" data-target="avia">Корпоротивным клиентам</a></li>
+                <li><a href="#" class="nav-link" data-target="train">Авиабилеты</a></li>
+                <li><a href="#" class="nav-link" data-target="bus">Справка </a></li>
+            </ul>    
+            <select name="language" id="language">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+              </select>       
+        </nav> 
+        <div class="hamburger" id="hamburger-menu"></div> 
+        <span></span><span></span><span></span>      
     </header>
  
+    <aside>
+        <div class="container">
+            <h1>Лучшие авиабилеты по самым низким ценам </h1>
+            <nav id ="second-nav">
+                <ul>
+                    <li id="avia-link" class="nav-item">Авиабилеты</li>
+                    <li id="train-link" class="nav-item">Ж/д билеты</li>
+                    <li id="bus-link" class="nav-item">Автобусы</li>
+                    <li id="hotels-link" class="nav-item">Отели</li>
+                    <li id="insurance-link" class="nav-item">Страхование</li>
+                </ul>
+            </nav>
+          </div> 
+        </aside>
 
+        <section class="search">
+            <form id="sflight-search-form">
+                <input type="text" id="from" placeholder="Откуда" class input="input-field" list="cities">
+                <input type="text" id="to" placeholder = "Куда" class input="input-field" list="cities">
+                <datalist id="cities">
+                    <option value="Москва"></option>
+                    <option value="Санкт-Петербург"></option>
+                    <option value="Барселона"></option>
+                    <option value="Лондон"></option>
+                    <option value="Нью-Йорк"></option>
+                    <option value="Варшава"></option>
+                </datalist>
+    
+                <input type="date" id="departure date" class="input">
+                <input type="date" id="return date" class="input">
+    
+                <select id="passenger count" class="input">
+                    <ul class="submenu-passenger">
+                    <option value="1">1 пассажир</option>
+                    <option value="2">2 пассажира</option>
+                    <option value="3">3 пассажира</option> 
+                    </ul>
+                
+                </select>
+            </form>
+        </section>
 <!--Main Section   -  user searching for flights-->
 
 <main>
-    <section class="search">
-        <form id="searchForm">
-            <input type="text" id="from" placeholder="Откуда" class input="input-field" list="cities">
-            <input type="text" id="to" placeholder = "Куда" class input="input-field" list="cities">
-            <datalist id="cities">
-                <option value="Москва"></option>
-                <option value="Санкт-Петербург"></option>
-                <option value="Барселона"></option>
-                <option value="Лондон"></option>
-                <option value="Нью-Йорк"></option>
-                <option value="Варшава"></option>
-            </datalist>
-
-            <input type="date" id="departure date" class="input">
-            <input type="date" id="return date" class="input">
-
-
-
-
-
-          
-            <select id="passenger count" class="input">
-                <ul class="submenu-passenger">
-                <option value="1">1 пассажир</option>
-                <option value="2">2 пассажира</option>
-                <option value="3">3 пассажира</option> 
-                </ul>
-            
-            </select>
-        </form>
-    </section>
+   
 </main>
 
 
